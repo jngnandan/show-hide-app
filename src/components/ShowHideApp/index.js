@@ -34,22 +34,13 @@ class ShowHideApp extends Component {
         }
 
 
-        if (presentState === "true") {
-            First = <div className="col-12 rounded m-1 p-3 bg-light"><h1>Sherlock</h1></div>;
+        presentState === "true" ? First = <div className="col-12 rounded m-1 p-3 bg-light"><h1>Sherlock</h1></div>
+            : First = ""
 
-        }
-        else if (presentState === "false") {
-            First = ""
-        }
-
-        if (secondState === "true") {
-            Second = <div className="col-12 rounded m-1 p-3 bg-light"><h1>Holmes</h1></div>;
+        secondState === "true" ? Second = <div className="col-12 rounded m-1 p-3 bg-light"><h1>Holmes</h1></div>
+            : Second = ""
 
 
-        }
-        else if (secondState === "false") {
-            Second = ""
-        }
 
         return (
             <div className="row vh-100">
