@@ -8,10 +8,6 @@ class ShowHideApp extends Component {
 
     render(props) {
         const { presentState, secondState } = this.state
-        const { Sample } = this.props
-        let First
-        let Second
-
 
         const clickFirst = () => {
             presentState === "false" ?
@@ -34,11 +30,6 @@ class ShowHideApp extends Component {
         }
 
 
-
-
-
-
-
         return (
             <div className="row vh-100">
                 <div className="col align-self-center text-center">
@@ -46,15 +37,12 @@ class ShowHideApp extends Component {
                     <div className="d-flex flex-row justify-content-center">
                         <div className="col-5">
                             <button onClick={clickFirst} className="col-12 m-1 btn btn-light mb-3">First Name</button>
-                            {presentState === "true" ? First = <div className="col-12 rounded m-1 p-3 bg-light"><h1>Sherlock</h1></div>
-                                : First = null}
+                            {presentState === "true" && <div className="col-12 rounded m-1 p-3 bg-light"><h1>Sherlock</h1></div>}
                         </div>
 
                         <div className="col-5">
                             <button onClick={clickSecond} className="col-12 m-1 btn btn-light mb-3">Last Name</button>
-                            {secondState === "true" ? Second = <div className="col-12 rounded m-1 p-3 bg-light"><h1>Holmes</h1></div>
-                                : Second = null
-                            }
+                            {secondState === "true" && <div className="col-12 rounded m-1 p-3 bg-light"><h1>Holmes</h1></div>}
                         </div>
                     </div>
 
